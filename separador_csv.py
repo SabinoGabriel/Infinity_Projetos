@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('C:/Users/gabri/Dropbox/PC (2)/Documents/estudos/infinity/projeto_final/sales_data_sample.csv', sep=',', encoding='latin1')
+df = pd.read_csv('sales_data_sample.csv', sep=',', encoding='latin1')
 
 df = df[df['STATUS'].isin(['Shipped', 'Resolved'])]# Removendo linhas com pedidos mal sucedidos
 df = df.drop(columns=['ADDRESSLINE2', 'STATE', 'POSTALCODE', 'TERRITORY', 'CONTACTFIRSTNAME', 'CONTACTLASTNAME', 'ORDERNUMBER','YEAR_ID', 'MONTH_ID', 'PHONE', 'MSRP', 'DEALSIZE', 'PRODUCTCODE', 'CITY', 'ADDRESSLINE1'])# Removendo colunas que não vão agregar à análise
@@ -14,11 +14,11 @@ df['SALES'] = (df['QUANTITYORDERED'] * df['PRICEEACH']).round(2) # Alterando a c
 df.drop_duplicates()
 df.dropna()
 
-df.to_csv('C:/Users/gabri/Dropbox/PC (2)/Documents/estudos/infinity/projeto_final/treated_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
+df.to_csv('treated_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
 
 df_2003 = df[df['ORDERDATE'].str.contains('2003')]# Separando os dados de 2003 para estudo
 df_general = df[df['ORDERDATE'].str.contains('2004', '2005')]# Separando os dados gerais para estudo
 
-df_2003.to_csv('C:/Users/gabri/Dropbox/PC (2)/Documents/estudos/infinity/projeto_final/2003_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
-df_general.to_csv('C:/Users/gabri/Dropbox/PC (2)/Documents/estudos/infinity/projeto_final/general_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
+df_2003.to_csv('2003_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
+df_general.to_csv('general_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
 
