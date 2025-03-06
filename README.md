@@ -1,4 +1,76 @@
-# Documentação do Projeto de Análise de Dados E-commerce
+# Análise de Dados e Previsão de Vendas E-commerce
+
+## Sobre o Projeto
+
+Este projeto realiza uma análise detalhada de dados de vendas de e-commerce e implementa um modelo preditivo para estimar vendas futuras. O projeto combina técnicas de análise exploratória de dados, estatística inferencial e machine learning para extrair insights acionáveis e previsões confiáveis.
+
+## Instalação
+
+### Requisitos
+
+Python 3.8+ é recomendado. Para instalar as dependências necessárias:
+
+```bash
+pip install -r requirements.txt
+```
+
+Principais dependências incluem:
+- pandas
+- numpy
+- matplotlib
+- plotly
+- scikit-learn
+- scipy
+
+## Estrutura do Projeto
+
+```
+.
+├── main.py                        # Script principal de análise e modelagem
+├── requirements.txt               # Dependências do projeto
+├── 2003_sales_data_sample.csv     # Dados de vendas de 2003 (amostra)
+├── general_sales_data_sample.csv  # Dados gerais de vendas (amostra)
+├── treated_sales_data_sample.csv  # Dados tratados (gerado pelo script)
+├── dataset_inicial_dados.txt      # Metadados do dataset original
+├── Projeto Data Science PRO.pptx  # Apresentação do projeto
+└── README.md                      # Documentação
+```
+
+## Como Usar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SabinoGabriel/Infinity_Projetos.git
+   cd Infinity_Projetos
+   ```
+
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Execute o script principal:
+   ```bash
+   python main.py
+   ```
+
+4. O script irá processar os dados, gerar visualizações interativas e mostrar resultados da modelagem preditiva.
+
+## Dados
+
+O projeto utiliza dados de vendas de e-commerce contendo os seguintes campos principais:
+
+- **ORDERNUMBER**: Identificador único do pedido
+- **QUANTITYORDERED**: Quantidade de itens pedidos
+- **PRICEEACH**: Preço unitário
+- **SALES**: Valor total da venda
+- **ORDERDATE**: Data do pedido
+- **STATUS**: Status do pedido (ex: Shipped, Resolved)
+- **PRODUCTLINE**: Categoria do produto
+- **CUSTOMERNAME**: Nome do cliente
+- **COUNTRY**: País do cliente
+
+Os dados abrangem vendas de diferentes categorias de produtos (Classic Cars, Vintage Cars, Motorcycles, etc.) em diversos países ao longo de diferentes períodos.
 
 ## Insights Importantes
 
@@ -75,9 +147,37 @@
 - Detecção e tratamento específico de outliers
 - Análise de segmentação de clientes para estratégias personalizadas
 - Market basket analysis para identificação de produtos relacionados
+- Análise de série temporal para detecção mais precisa de sazonalidade
+- Implementação de interface de usuário para interação com o modelo
 
 ### Valor para o Negócio
 - Suporte à decisão com previsões de vendas baseadas em dados
 - Identificação de padrões sazonais e tendências de mercado
 - Avaliação quantitativa do desempenho de diferentes categorias de produtos
 - Base sólida para otimização de estoque e estratégias de marketing
+
+## Outputs do Projeto
+
+### Visualizações
+O script gera diversas visualizações interativas usando Plotly, incluindo:
+- Tendências de vendas mensais
+- Top países por volume de vendas
+- Distribuição de vendas por categoria de produto
+- Correlações entre quantidade pedida e valor total
+- Padrões sazonais de vendas
+- Comparação entre valores reais e previstos
+- Previsões para o próximo período
+
+### Métricas de Modelo
+O modelo produz métricas de avaliação completas:
+- MSE (Mean Squared Error)
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+- R² (Coeficiente de determinação)
+
+### Previsões
+As previsões geradas incluem:
+- Total de vendas previstas para o próximo mês
+- Média de vendas diárias prevista
+- Previsões de vendas por dia
+- Previsões por categoria de produto
