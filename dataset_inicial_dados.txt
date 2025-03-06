@@ -1,0 +1,70 @@
+
+# RangeIndex: 2823 entries, 0 to 2822
+# Data columns (total 25 columns):
+#  #   Column            Non-Null Count  Dtype
+# ---  ------            --------------  -----
+#  0   ORDERNUMBER       2823 non-null   int64
+#  1   QUANTITYORDERED   2823 non-null   int64
+#  2   PRICEEACH         2823 non-null   float64
+#  3   ORDERLINENUMBER   2823 non-null   int64
+#  4   SALES             2823 non-null   float64
+#  5   ORDERDATE         2823 non-null   object
+#  6   STATUS            2823 non-null   object
+#  7   QTR_ID            2823 non-null   int64
+#  8   MONTH_ID          2823 non-null   int64
+#  9   YEAR_ID           2823 non-null   int64
+#  10  PRODUCTLINE       2823 non-null   object
+#  11  MSRP              2823 non-null   int64
+#  12  PRODUCTCODE       2823 non-null   object
+#  13  CUSTOMERNAME      2823 non-null   object
+#  14  PHONE             2823 non-null   object
+#  15  ADDRESSLINE1      2823 non-null   object
+#  16  ADDRESSLINE2      302 non-null    object
+#  17  CITY              2823 non-null   object
+#  18  STATE             1337 non-null   object
+#  19  POSTALCODE        2747 non-null   object
+#  20  COUNTRY           2823 non-null   object
+#  21  TERRITORY         1749 non-null   object
+#  22  CONTACTLASTNAME   2823 non-null   object
+#  23  CONTACTFIRSTNAME  2823 non-null   object
+#  24  DEALSIZE          2823 non-null   object
+# dtypes: float64(2), int64(7), object(16)
+
+   ORDERNUMBER  QUANTITYORDERED  PRICEEACH  ...  CONTACTLASTNAME  CONTACTFIRSTNAME DEALSIZE
+0        10107               30      95.70  ...               Yu              Kwai    Small
+1        10121               34      81.35  ...          Henriot              Paul    Small
+2        10134               41      94.74  ...         Da Cunha            Daniel   Medium
+3        10145               45      83.26  ...            Young             Julie   Medium
+4        10159               49     100.00  ...            Brown             Julie   Medium
+
+[5 rows x 25 columns]       ORDERNUMBER  QUANTITYORDERED  PRICEEACH  ...  CONTACTLASTNAME  CONTACTFIRSTNAME DEALSIZE
+2818        10350               20     100.00  ...           Freyre             Diego    Small
+2819        10373               29     100.00  ...        Koskitalo            Pirkko   Medium
+2820        10386               43     100.00  ...           Freyre             Diego   Medium
+2821        10397               34      62.24  ...           Roulet           Annette    Small
+2822        10414               47      65.52  ...          Yoshido              Juri   Medium
+
+[5 rows x 25 columns]       ORDERNUMBER  QUANTITYORDERED  PRICEEACH  ...  CONTACTLASTNAME  CONTACTFIRSTNAME DEALSIZE
+852         10367               32      94.79  ...            Young             Julie   Medium
+945         10222               49      94.62  ...         Thompson           Valarie   Medium
+1128        10280               34     100.00  ...          Accorti             Paolo   Medium
+2273        10383               44      36.07  ...           Freyre             Diego    Small
+45          10322               40     100.00  ...            Young           Valarie   Medium
+2658        10340               29     100.00  ...         Saavedra           Eduardo   Medium
+1155        10287               40     100.00  ...             Holz           Michael   Medium
+1538        10416               47      88.63  ...           Moroni          Maurizio   Medium
+1027        10184               28     100.00  ...             Roel        Jose Pedro   Medium
+1671        10145               27      60.95  ...            Young             Julie    Small
+
+[10 rows x 25 columns] (2823, 25)         ORDERNUMBER  QUANTITYORDERED    PRICEEACH  ...     MONTH_ID     
+YEAR_ID         MSRP
+count   2823.000000      2823.000000  2823.000000  ...  2823.000000  2823.00000  2823.000000
+mean   10258.725115        35.092809    83.658544  ...     7.092455  2003.81509   100.715551
+std       92.085478         9.741443    20.174277  ...     3.656633     0.69967    40.187912
+min    10100.000000         6.000000    26.880000  ...     1.000000  2003.00000    33.000000
+25%    10180.000000        27.000000    68.860000  ...     4.000000  2003.00000    68.000000
+50%    10262.000000        35.000000    95.700000  ...     8.000000  2004.00000    99.000000
+75%    10333.500000        43.000000   100.000000  ...    11.000000  2004.00000   124.000000
+max    10425.000000        97.000000   100.000000  ...    12.000000  2005.00000   214.000000
+
+[8 rows x 9 columns]
