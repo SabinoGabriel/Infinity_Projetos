@@ -11,7 +11,8 @@ df = df.sort_values(by=['ORDERDATE','ORDERLINENUMBER'])# Ordenando o dataframe p
 df['ORDERDATE'] = df['ORDERDATE'].dt.strftime('%d/%m/%Y') # Convertendo a data para o formato brasileiro
 
 df['SALES'] = (df['QUANTITYORDERED'] * df['PRICEEACH']).round(2) # Alterando a coluna SALES para o valor do faturamento
-
+df.drop_duplicates()
+df.dropna()
 
 df.to_csv('C:/Users/gabri/Dropbox/PC (2)/Documents/estudos/infinity/projeto_final/treated_sales_data_sample.csv', sep=',', encoding='latin1', index=False)
 
